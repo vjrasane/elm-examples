@@ -1,0 +1,15 @@
+{
+  "name": "elm-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vjrasane/elm-sandbox.git",
+  "author": "vjrasane <vjrasane@gmail.com>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "make": "elm make ./src/Main.elm --output=./public/js/main.js",
+    "live": "elm-live -open --dir=public -- src/Main.elm --output=public/js/main.js"
+  },
+  "devDependencies": {
+    "elm-live": "^3.4.0"
+  }
+}
