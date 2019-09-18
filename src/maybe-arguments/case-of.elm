@@ -1,4 +1,4 @@
-module Main exposing (..)
+module Main exposing (Input, Output, unwrapSwitchCase)
 
 
 type alias Input =
@@ -29,12 +29,13 @@ unwrapSwitchCase { maybeString, maybeInt, maybeFloat, maybeList, maybeMaybe } =
         ( Just string, Just int, Just float ) ->
             case ( maybeList, maybeMaybe ) of
                 ( Just list, Just maybe ) ->
-                    Output
-                        string
-                        int
-                        float
-                        list
-                        maybe
+                    Just <|
+                        Output
+                            string
+                            int
+                            float
+                            list
+                            maybe
 
                 ( _, _ ) ->
                     Nothing
